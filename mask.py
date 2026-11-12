@@ -56,7 +56,7 @@ def get_mask_token_index(mask_token_id, inputs):
         mask_index = mask_index[0,0]
 
     return mask_index
-    
+
     # TODO: Implement this function
 
 
@@ -67,11 +67,11 @@ def get_color_for_attention_score(attention_score):
     given `attention_score`. Each value should be in the range [0, 255].
     """
     # Suppose all values above maximum_score (to be adjusted with results) correspond to the maximum
-    maximum_score = 1/6
+    maximum_score = 1
     shade = int(min(255, attention_score / maximum_score * 255))
     # Cases where score > maximum_score
     return shade, shade, shade
-    
+
     # TODO: Implement this function
     #raise NotImplementedError
 
